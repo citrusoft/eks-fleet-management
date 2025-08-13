@@ -1182,7 +1182,7 @@ Resources:
                           - bucketName
                         AssetsBucketPrefix: 28c283c1-1d60-43fa-a604-4e983e0e8038/
                         WORKSHOP_GIT_URL: https://github.com/citrusoft/eks-fleet-management
-                        WORKSHOP_GIT_BRANCH: riv24
+                        WORKSHOP_GIT_BRANCH: mainline
                     installGitea: |
                       dnf install -y nerdctl cni-plugins
                       mkdir -p /gitea/config /gitea/data
@@ -1506,7 +1506,7 @@ Resources:
             Value: https://github.com/citrusoft/eks-fleet-management
           - Name: WORKSHOP_GIT_BRANCH
             Type: PLAINTEXT
-            Value: riv24
+            Value: mainline
           - Name: FORCE_DELETE_VPC
             Type: PLAINTEXT
             Value: 'true'
@@ -1549,7 +1549,7 @@ Resources:
                   BUCKET_NAME=${TFSTATE_BUCKET_NAME}
                   BASE_DIR=${CODEBUILD_SRC_DIR}
                   WORKSHOP_GIT_URL=${WORKSHOP_GIT_URL:-https://github.com/citrusoft/eks-fleet-management}
-                  WORKSHOP_GIT_BRANCH=${WORKSHOP_GIT_BRANCH:-riv24}
+                  WORKSHOP_GIT_BRANCH=${WORKSHOP_GIT_BRANCH:-mainline}
                   IS_WS=${IS_WS:-false}
                   GITEA_PASSWORD=${GITEA_PASSWORD}
 
@@ -1942,7 +1942,7 @@ Resources:
             Value: https://github.com/citrusoft/eks-fleet-management
           - Name: WORKSHOP_GIT_BRANCH
             Type: PLAINTEXT
-            Value: riv24
+            Value: mainline
           - Name: FORCE_DELETE_VPC
             Type: PLAINTEXT
             Value: 'true'
@@ -1979,7 +1979,7 @@ Resources:
                   BUCKET_NAME=${TFSTATE_BUCKET_NAME}
                   BASE_DIR=${CODEBUILD_SRC_DIR}
                   WORKSHOP_GIT_URL=${WORKSHOP_GIT_URL:-https://github.com/citrusoft/eks-fleet-management}
-                  WORKSHOP_GIT_BRANCH=${WORKSHOP_GIT_BRANCH:-riv24}
+                  WORKSHOP_GIT_BRANCH=${WORKSHOP_GIT_BRANCH:-mainline}
 
                   env | sort
 
@@ -2353,7 +2353,7 @@ Resources:
             Value: https://github.com/citrusoft/eks-fleet-management
           - Name: WORKSHOP_GIT_BRANCH
             Type: PLAINTEXT
-            Value: riv24
+            Value: mainline
           - Name: FORCE_DELETE_VPC
             Type: PLAINTEXT
             Value: 'true'
@@ -2393,7 +2393,7 @@ Resources:
                   BUCKET_NAME=${TFSTATE_BUCKET_NAME}
                   BASE_DIR=${CODEBUILD_SRC_DIR}
                   WORKSHOP_GIT_URL=${WORKSHOP_GIT_URL:-https://github.com/citrusoft/eks-fleet-management}
-                  WORKSHOP_GIT_BRANCH=${WORKSHOP_GIT_BRANCH:-riv24}
+                  WORKSHOP_GIT_BRANCH=${WORKSHOP_GIT_BRANCH:-mainline}
 
                   env | sort
 
@@ -2767,7 +2767,7 @@ Resources:
             Value: https://github.com/citrusoft/eks-fleet-management
           - Name: WORKSHOP_GIT_BRANCH
             Type: PLAINTEXT
-            Value: riv24
+            Value: mainline
           - Name: FORCE_DELETE_VPC
             Type: PLAINTEXT
             Value: 'true'
@@ -2807,7 +2807,7 @@ Resources:
                   BUCKET_NAME=${TFSTATE_BUCKET_NAME}
                   BASE_DIR=${CODEBUILD_SRC_DIR}
                   WORKSHOP_GIT_URL=${WORKSHOP_GIT_URL:-https://github.com/citrusoft/eks-fleet-management}
-                  WORKSHOP_GIT_BRANCH=${WORKSHOP_GIT_BRANCH:-riv24}
+                  WORKSHOP_GIT_BRANCH=${WORKSHOP_GIT_BRANCH:-mainline}
 
                   env | sort
 
