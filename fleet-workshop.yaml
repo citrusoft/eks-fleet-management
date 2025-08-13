@@ -920,7 +920,7 @@ Resources:
                         export BUCKET_NAME=${BUCKET_NAME} # Coming from Fn.Sub
                         export WORKSHOP_GIT_URL=${WORKSHOP_GIT_URL} # Coming from Fn.Sub
                         export WORKSHOP_GIT_BRANCH=${WORKSHOP_GIT_BRANCH} # Coming from Fn.Sub
-                        export BASE_DIR=/home/ec2-user/environment/fleet-management-on-amazon-eks-workshop
+                        export BASE_DIR=/home/ec2-user/environment/eks-fleet-management
                         export GITOPS_DIR=/home/ec2-user/environment/gitops-repos
                         export GOROOT=/usr/local/go
 
@@ -1181,7 +1181,7 @@ Resources:
                           - !Ref AWS::Region
                           - bucketName
                         AssetsBucketPrefix: 28c283c1-1d60-43fa-a604-4e983e0e8038/
-                        WORKSHOP_GIT_URL: https://github.com/aws-samples/fleet-management-on-amazon-eks-workshop
+                        WORKSHOP_GIT_URL: https://github.com/citrusoft/eks-fleet-management
                         WORKSHOP_GIT_BRANCH: riv24
                     installGitea: |
                       dnf install -y nerdctl cni-plugins
@@ -1503,7 +1503,7 @@ Resources:
             Value: !Ref TFStateBackendBucketF0FC9A9D
           - Name: WORKSHOP_GIT_URL
             Type: PLAINTEXT
-            Value: https://github.com/aws-samples/fleet-management-on-amazon-eks-workshop
+            Value: https://github.com/citrusoft/eks-fleet-management
           - Name: WORKSHOP_GIT_BRANCH
             Type: PLAINTEXT
             Value: riv24
@@ -1548,7 +1548,7 @@ Resources:
                   ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
                   BUCKET_NAME=${TFSTATE_BUCKET_NAME}
                   BASE_DIR=${CODEBUILD_SRC_DIR}
-                  WORKSHOP_GIT_URL=${WORKSHOP_GIT_URL:-https://github.com/aws-samples/fleet-management-on-amazon-eks-workshop}
+                  WORKSHOP_GIT_URL=${WORKSHOP_GIT_URL:-https://github.com/citrusoft/eks-fleet-management}
                   WORKSHOP_GIT_BRANCH=${WORKSHOP_GIT_BRANCH:-riv24}
                   IS_WS=${IS_WS:-false}
                   GITEA_PASSWORD=${GITEA_PASSWORD}
@@ -1939,7 +1939,7 @@ Resources:
             Value: !Ref TFStateBackendBucketF0FC9A9D
           - Name: WORKSHOP_GIT_URL
             Type: PLAINTEXT
-            Value: https://github.com/aws-samples/fleet-management-on-amazon-eks-workshop
+            Value: https://github.com/citrusoft/eks-fleet-management
           - Name: WORKSHOP_GIT_BRANCH
             Type: PLAINTEXT
             Value: riv24
@@ -1978,7 +1978,7 @@ Resources:
                   ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
                   BUCKET_NAME=${TFSTATE_BUCKET_NAME}
                   BASE_DIR=${CODEBUILD_SRC_DIR}
-                  WORKSHOP_GIT_URL=${WORKSHOP_GIT_URL:-https://github.com/aws-samples/fleet-management-on-amazon-eks-workshop}
+                  WORKSHOP_GIT_URL=${WORKSHOP_GIT_URL:-https://github.com/citrusoft/eks-fleet-management}
                   WORKSHOP_GIT_BRANCH=${WORKSHOP_GIT_BRANCH:-riv24}
 
                   env | sort
@@ -2350,7 +2350,7 @@ Resources:
             Value: !Ref TFStateBackendBucketF0FC9A9D
           - Name: WORKSHOP_GIT_URL
             Type: PLAINTEXT
-            Value: https://github.com/aws-samples/fleet-management-on-amazon-eks-workshop
+            Value: https://github.com/citrusoft/eks-fleet-management
           - Name: WORKSHOP_GIT_BRANCH
             Type: PLAINTEXT
             Value: riv24
@@ -2392,7 +2392,7 @@ Resources:
                   ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
                   BUCKET_NAME=${TFSTATE_BUCKET_NAME}
                   BASE_DIR=${CODEBUILD_SRC_DIR}
-                  WORKSHOP_GIT_URL=${WORKSHOP_GIT_URL:-https://github.com/aws-samples/fleet-management-on-amazon-eks-workshop}
+                  WORKSHOP_GIT_URL=${WORKSHOP_GIT_URL:-https://github.com/citrusoft/eks-fleet-management}
                   WORKSHOP_GIT_BRANCH=${WORKSHOP_GIT_BRANCH:-riv24}
 
                   env | sort
@@ -2764,7 +2764,7 @@ Resources:
             Value: !Ref TFStateBackendBucketF0FC9A9D
           - Name: WORKSHOP_GIT_URL
             Type: PLAINTEXT
-            Value: https://github.com/aws-samples/fleet-management-on-amazon-eks-workshop
+            Value: https://github.com/citrusoft/eks-fleet-management
           - Name: WORKSHOP_GIT_BRANCH
             Type: PLAINTEXT
             Value: riv24
@@ -2806,7 +2806,7 @@ Resources:
                   ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
                   BUCKET_NAME=${TFSTATE_BUCKET_NAME}
                   BASE_DIR=${CODEBUILD_SRC_DIR}
-                  WORKSHOP_GIT_URL=${WORKSHOP_GIT_URL:-https://github.com/aws-samples/fleet-management-on-amazon-eks-workshop}
+                  WORKSHOP_GIT_URL=${WORKSHOP_GIT_URL:-https://github.com/citrusoft/eks-fleet-management}
                   WORKSHOP_GIT_BRANCH=${WORKSHOP_GIT_BRANCH:-riv24}
 
                   env | sort
@@ -3174,7 +3174,7 @@ Resources:
             name: SetupGit
             inputs:
               runCommand:
-                - sudo su - ec2-user -c 'GITOPS_DIR=/home/ec2-user/environment/gitops-repos ~/environment/fleet-management-on-amazon-eks-workshop/setup-git.sh'
+                - sudo su - ec2-user -c 'GITOPS_DIR=/home/ec2-user/environment/gitops-repos ~/environment/eks-fleet-management/setup-git.sh'
       DocumentFormat: YAML
       DocumentType: Command
       TargetType: /AWS::EC2::Instance
